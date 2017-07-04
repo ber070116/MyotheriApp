@@ -10,8 +10,10 @@
     <title>My App</title>
     <!-- Path to Framework7 iOS CSS theme styles-->
     <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- Path to Framework7 iOS related color styles -->
     <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
     <!-- Path to your custom app styles-->
     <!-- <link rel="stylesheet" href="path/to/my-app.css"> -->
   </head>
@@ -30,31 +32,25 @@
     <div class="views">
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
-        <!-- Top Navbar-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-            <div class="center sliding">Awesome App</div>
-            <div class="right">
-              <!-- 
-                Right link contains only icon - additional "icon-only" class
-                Additional "open-panel" class tells app to open panel when we click on this link
-              -->
-              <a href="#" class="link icon-only open-panel" style="display: none"><i class="icon icon-bars"></i></a>
-            </div>
-          </div>
-        </div>
         <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
           <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
               <!-- Vista para abrir el login -->
               <div class="page-content">
-                <div class="content-block">
-                  <p><a href="#" class="open-login-screen">Open Login Screen</a></p>
-                </div>
+                  <div class="content-block inset">
+                    <div>
+                      <h1 style="text-align: center;">¡Hola!</h1>
+                    </div>
+                    <div class="content-block-inner">
+                      ¿Estas list@ para conocer personas con tus mismos gustos?
+                    </div>
+                    <p class="buttons-row">
+                      <a href="#" class="button button-fill color-green open-login-screen">Ingresar</a>
+                    </p>
+                  </div>
               </div>
-              <!-- Login -->
+              <!-- Vista para abrir el login -->
             
               <!-- LOGIN -->
               <div class="login-screen">
@@ -64,38 +60,42 @@
                       <div class="login-screen-title">Myotheri</div>
                       <form>
                         <div class="list-block">
-                          <ul>
-                            <li class="item-content">
-                              <div class="item-inner">
-                                <div class="item-title label">Usuario</div>
-                                <div class="item-input">
-                                  <input type="text" name="username" placeholder="Your username">
+                            <ul>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label">Usuario</div>
+                                  <div class="item-input">
+                                    <input type="text" name="username" placeholder="Tu nombre de usuario">
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
-                            <li class="item-content">
-                              <div class="item-inner">
-                                <div class="item-title label">Contraseña</div>
-                                <div class="item-input">
-                                  <input type="password" name="password" placeholder="Your password">
+                              </li>
+                              <li class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title label">Contraseña</div>
+                                  <div class="item-input">
+                                    <input type="password" name="password" placeholder="Tu contraseña">
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
-                          </ul>
+                              </li>
+                            </ul>
                         </div>
                         <div class="list-block">
+                          <div class="content-block">
                           <ul>
                             <p class="buttons-row">
                               <a href="#" class="button button-fill color-blue">Registrarme</a>
-                              <a href="#" class="button button-fill color-green">Inisiar sesion</a>
+                              <a href="#" class="button button-fill color-green">Iniciar sesion</a>
                             </p>
                           </ul>
+                          </div>
                           <div class="list-block-label">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="buttons-row">
-                              <a href="#" class="button color-red">Olvide mi contraseña</a>
+                            <p>
+                              <a href="#" class="color-red center">Olvide mi contraseña</a>
                             </p>
-                            <p><a href="#" class="close-login-screen">Cerrar login</a></p>
+                            <p>
+                              <a href="#" class="close-login-screen">Cerrar login</a>
+                            </p>
                           </div>
                         </div>
                       </form>
@@ -103,14 +103,15 @@
                   </div>
                 </div>
               </div>
+              <!-- LOGIN -->
           </div>
         </div>
         <!-- Bottom Toolbar-->
-        <div class="toolbar">
-          <div class="toolbar-inner">
+        <div class="toolbar" style="display: none;">
+          <div class="toolbar-inner bars-color">
             <!-- Toolbar links -->
-            <a href="#" class="link">Link 1</a>
-            <a href="#" class="link">Link 2</a>
+            <a href="#" class="link" style="display:none;">Link 1</a>
+            <a href="#" class="link" style="display:none;">Link 2</a>
           </div>
         </div>
       </div>
